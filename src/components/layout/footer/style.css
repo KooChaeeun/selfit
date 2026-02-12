@@ -1,0 +1,267 @@
+/* 모든 요소의 패딩이 너비에 영향을 주지 않도록 설정 (필수) */
+.ft *, .ft *:before, .ft *:after {
+  box-sizing: border-box !important;
+}
+
+/* ================= PC 기본 스타일 ================= */
+.ft {
+  width: 100%;
+  height: 800px;
+  padding: 192px 170px 100px 186px;
+  background-color: var(--grey-bg);
+  font-family: var(--font-sub);
+  color: var(--color-main);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.ft-wrap {
+  width: 1580px; 
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ft-top {
+  display: flex;
+  width: 100%;
+  margin-bottom: 120px;
+  align-items: flex-start;
+}
+
+.ft-section {
+  display: flex;
+  flex-direction: column;
+  /* 상하 10px 패딩이 각각 붙으므로 gap은 0으로 설정하여 간격 유지 */
+  gap: 0; 
+}
+
+/* PC 섹션 간격 설정 (패딩 공간을 고려해 마진 최적화) */
+.ft-light {
+  margin-right: 980px; 
+}
+
+.ft-right {
+  min-width: max-content;
+}
+
+.ft-right + .ft-right {
+  margin-left: 210px; 
+}
+
+.ft-ttl {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--grey-800);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.ft-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 숫자로만 되어 있던 gap에 px 단위 추가 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--color-main);
+}
+
+.touch-item {
+  font-size: 14px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.touch-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ft-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.join-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 236px;
+  transition: width 0.3s ease;
+}
+
+.join-btn img,
+.join-btn svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+.copy {
+  font-size: 12px;
+  color: var(--grey-600);
+}
+
+.ft-bg {
+  position: absolute;
+  bottom: -115px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw; 
+  max-width: 976px;
+  z-index: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.ft-bg-svg {
+  width: 100%;
+  height: auto;
+  fill: var(--color-main);
+}
+
+/* ================= 태블릿 (1024px) ================= */
+@media screen and (max-width: 1024px) {
+  .ft {
+    height: auto;
+    padding: 55px 64px 80px 50px !important; 
+  }
+
+  .ft-wrap {
+    width: 980px !important;
+  }
+
+  .ft-top {
+    margin-bottom: 80px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  .ft-section {
+    margin: 0 !important;
+  }
+
+  .ft-ttl{
+    padding: 10px !important;
+  }
+
+  .touch-item {
+    padding: 10px !important;
+  }
+
+  .ft-light {
+    margin-right: 0 !important;
+    flex: 0 1 auto;
+  }
+
+  /* 태블릿 정렬을 위해 마진 초기화 추가 */
+  .ft-right + .ft-right {
+    margin-left: 0 !important; 
+  }
+
+  .ft-info-list {
+    flex-direction: column !important;
+  }
+
+  .join-btn {
+    width: 210px !important; 
+  }
+
+  .ft-bg {
+    width: 80vw;
+    bottom: -60px;
+  }
+}
+
+/* ================= 모바일 (360px 이하) ================= */
+@media screen and (max-width: 360px) {
+  .ft {
+    padding: 32px 16px !important;
+    height: auto;
+  }
+
+  .ft-wrap {
+    width: 328px !important;
+  }
+
+  .ft-top {
+    flex-direction: column !important; 
+    gap: 32px !important; 
+  }
+
+  .ft-section {
+    width: 100% !important;
+    gap: 16px !important; /* 타이틀과 리스트 사이 간격 유지 */
+  }
+
+  /* POLICIES가 밀리는 원인인 PC용 margin-left 210px를 0으로 초기화 */
+  .ft-right + .ft-right {
+    margin-left: 0 !important;
+  }
+
+  .ft-ttl {
+    width: 100% !important; 
+    padding: 0 !important; /* 모바일 패딩 제거 */
+    margin: 0 !important;
+    font-size: 14px;
+  }
+
+  .ft-info-list {
+    display: flex !important;
+    flex-direction: row !important; 
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .touch-item {
+    display: flex !important;
+    width: auto !important;
+    height: 42px !important; 
+    justify-content: flex-start !important;
+    align-items: center !important; 
+    padding: 0 !important; /* 모바일 패딩 제거 */
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 16px;
+  }
+
+
+  .ft-bottom {
+    padding: 0 !important;
+    gap: 16px !important;
+  }
+
+  .join-btn {
+    width: 180px !important;
+  }
+
+  .copy {
+    padding: 0 !important;
+    font-size: 10px !important; 
+  }
+
+  .ft-bg {
+    position: absolute !important;
+    width: 150vw !important; 
+    max-width: none !important;
+    bottom: -30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 0 !important;
+    opacity: 0.1 !important;
+    pointer-events: none;
+  }
+}

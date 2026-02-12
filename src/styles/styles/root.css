@@ -1,0 +1,163 @@
+/* ================= Font Load ================= */
+
+/* 반드시 파일 최상단에 위치할 수 있도록 */
+/* 구글 폰트: Roboto와 Outfit (400, 600, 700) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap");
+
+/* Freesentation: public/fonts 폴더 내 실제 파일명과 매칭 */
+/* Regular (400) */
+@font-face {
+  font-family: "Freesentation";
+  src: url("/fonts/Freesentation-4Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold (600) */
+@font-face {
+  font-family: "Freesentation";
+  src: url("/fonts/Freesentation-6SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: "Freesentation";
+  src: url("/fonts/Freesentation-7Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ExtraBold (800) */
+@font-face {
+  font-family: "Freesentation";
+  src: url("/fonts/Freesentation-8ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Black (900) - 9Black 파일 반영 */
+@font-face {
+  font-family: "Freesentation";
+  src: url("/fonts/Freesentation-9Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================= Root Variables ================= */
+
+:root {
+  /* ================= Font================= */
+  --font-main: "Freesentation", sans-serif;
+  --font-sub: "Roboto", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
+
+  /* ================= Main Color ================= */
+  --color-main: #222222;
+  --color-point: #e3cfb6;
+  --color-red: #ff4040;
+
+  /* ================= White ================= */
+  --white-solid: #ffffff;
+  --white-92: #ffffffeb;
+  --white-72: #ffffffb8;
+  --white-40: #ffffff66;
+  --white-24: #ffffff3d;
+  --white-16: #ffffff29;
+  --white-8: #ffffff14;
+
+
+  /* ================= Black ================= */
+  --black-solid: #000000;
+  --black-92: #000000eb;
+  --black-72: #000000b8;
+  --black-40: #00000066;
+  --black-16: #00000029;
+  --black-8: #00000014;
+
+
+  /* ================= Grey Scale ================= */
+  --grey-50: #f5f5f7;
+  --grey-100: #e7e7e7;
+  --grey-200: #dcdcdc;
+  --grey-300: #cccccc;
+  --grey-400: #c2c2c2;
+  --grey-500: #b3b3b3;
+  --grey-600: #a3a3a3;
+  --grey-700: #7f7f7f;
+  --grey-800: #626262;
+  --grey-900: #4b4b4b;
+  --grey-bg: #eeeeee;
+  --grey-bg-02: #f9f9f9;
+
+
+  /* ================= Gradients ================= */
+  --gradient-box: linear-gradient(157deg, #aeaeaea6 0%, #7c7878a8 100%);
+  --gradient-black-line: linear-gradient(134deg, #ffffff75 0%, #00000000 100%);
+  --gradient-ivory: linear-gradient(180deg, #f5f5f5 0%, #f6f4ed 100%);
+
+
+  /* ================= spacing ================= */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-32: 32px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-192: 192px;
+
+  /* ================= Font Size ================= */
+  --fs-10: 10px;
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+  --fs-40: 40px;
+  --fs-44: 44px;
+  --fs-48: 48px;
+  --fs-52: 52px;
+  --fs-60: 60px;
+  --fs-72: 72px;
+  --fs-84: 84px;
+  --fs-130: 130px;
+
+  /* ================= Font Weight ================= */
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+}
+
+
+
+
+/* 쓰는 예시
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--white-solid);
+  color: var(--color-main);
+}
+
+.button-primary {
+  background-color: var(--color-main);
+  color: var(--white-solid);
+  padding: var(--space-16) var(--space-32);
+  border-radius: 10px;
+}
+
+
+*/

@@ -1,0 +1,240 @@
+@media (min-width: 1024px) {
+    .inner {
+        padding-left: clamp(32px, 15vw, 170px);
+        padding-right: clamp(32px, 15vw, 170px);
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .main-title-group {
+        height: 28vw;
+    }
+}
+
+/* --- 테블릿 (1510px 미만) --- */
+@media (max-width: 1510px) {
+    .news-list .item-title {
+        font-size: clamp(20px, 2.2vw, 38px);
+    }
+    .fitting-title .arrow img {
+        width: clamp(24px, 5vw, 40px);
+    }
+}
+
+/* --- 테블릿 (1024px 미만) --- */
+@media (max-width: 1024px) {
+    .inner {
+        padding-top: clamp(32px, 12vw, 96px);
+        padding-bottom: clamp(32px, 12vw, 96px);
+    }
+    /* --------<Header>-------- */
+    .mobile-menu-btn {
+        display: block;
+    }
+    .util .user-btn,
+    .cart-btn {
+        display: none;
+    }
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* 기본적으로 화면 밖으로 밀어둠 */
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95); /* 어두운 배경 */
+        transition: 0.4s ease;
+        z-index: 1000;
+    }
+
+    .nav.open {
+        right: 0; /* 열렸을 때 화면 안으로 들어옴 */
+    }
+
+    .gnb {
+        flex-direction: column; /* 세로 정렬 */
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 30px;
+    }
+    .gnb a {
+        font-size: 1.5rem; /* 모바일에서 글자 크기 키움 */
+    }
+    .close-btn {
+        display: block;
+    }
+    /* --------//<Header>-------- */
+
+    /* --------<Hero>--------  */
+    .main-title-group {
+        width: 90vw;
+        height: 50vw;
+    }
+    .main-title-group img {
+        width: 75%;
+    }
+    /* --------//<Hero>--------  */
+
+    /* ------<Live-show-txt-loop>------ */
+    .live-txtLoop {
+        padding: 16px;
+    }
+    .loop-track p {
+        font-size: 44px;
+    }
+    /* ------//<Live-show-txt-loop>------ */
+
+    /* --------<Live>--------  */
+    .live-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    /* --------//<Live>--------  */
+
+    /* --------<News>-------- */
+    .news-item {
+        padding-bottom: 32px;
+    }
+
+    .news-list .item-title {
+        font-size: clamp(28px, 2.7vw, 48px);
+    }
+    .news-list .item-tags .tag {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+    /* --------//<News>-------- */
+
+    /* --------<Fitting>-------- */
+    .fitting-section .inner {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 60px;
+    }
+
+    .fit-area {
+        width: 100%;
+    }
+    /* --------//<Fitting>-------- */
+}
+
+/* --- 모바일 (768px 이하) --- */
+@media (max-width: 768px) {
+    .inner {
+        padding-left: clamp(16px, 4vw, 32px);
+        padding-right: clamp(16px, 4vw, 32px);
+    }
+    /* --------<Hero>--------  */
+    .main-title-group {
+        width: 95vw;
+        height: 60vw;
+    }
+    .main-title-group img {
+        width: 85%;
+    }
+    .img-your {
+        margin-right: 0;
+    }
+    /* --------//<Hero>--------  */
+
+    /* ------<Live-show-txt-loop>------ */
+    .live-txtLoop {
+        padding: 10px;
+    }
+    .loop-track p {
+        font-size: 36px;
+    }
+    /* ------//<Live-show-txt-loop>------ */
+
+    /* --------<Live>--------  */
+
+    /* --------//<Live>--------  */
+
+    /* --------<News>-------- */
+    .news-section {
+        padding: 40px 0;
+    }
+
+    .news-item {
+        padding-bottom: 16px;
+    }
+
+    .news-item {
+        flex-direction: column; /* 세로 배치로 변경 */
+    }
+
+    .news-item .img-box {
+        width: 100%;
+    }
+
+    .news-item .text-box {
+        padding: 20px;
+    }
+
+    .news-list .item-title {
+        font-size: clamp(22px, 2.8vw, 28px);
+    }
+
+    .news-title .title {
+        font-size: 22px;
+    }
+
+    .news-list .text-box .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-list .text-box .title-area {
+        display: contents;
+    }
+
+    .news-list .item-title {
+        order: 1;
+    }
+
+    .news-list .item-desc {
+        order: 2;
+    }
+
+    .news-list .item-tags {
+        order: 3;
+        justify-content: flex-start;
+    }
+
+    /* --------//<News>-------- */
+
+    /* --------<Fitting>-------- */
+    .fitting-section .inner {
+        flex-direction: column;
+        text-align: left;
+        gap: 16px;
+    }
+
+    .fitting-title .title {
+        font-size: 28px;
+    }
+
+    .fitting-title h2.title {
+        display: flex;
+    }
+
+    .fitting-title h2.title p:first-child {
+        order: 1;
+    }
+
+    .fitting-title h2.title span {
+        order: 3;
+        margin-left: auto;
+    }
+
+    .fitting-title h2.title p:last-child {
+        order: 2;
+        margin-left: 10px;
+    }
+
+    .model-img {
+        width: clamp(200px, 20vw, 320px);
+        z-index: 2;
+    }
+}
+
+/* --------//<Fitting>-------- */
