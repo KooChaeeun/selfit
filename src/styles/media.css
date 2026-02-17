@@ -1,30 +1,51 @@
 @media (min-width: 1024px) {
-    .inner {
-        padding-left: clamp(32px, 15vw, 170px);
-        padding-right: clamp(32px, 15vw, 170px);
-        padding-top: 96px;
-        padding-bottom: 96px;
-    }
     .main-title-group {
         height: 28vw;
     }
 }
 
-/* --- 테블릿 (1510px 미만) --- */
-@media (max-width: 1510px) {
+/* --- 테블릿 (1300px 이하) --- */
+@media (max-width: 1300px) {
+    .inner {
+        padding: 96px 100px;
+    }
+    .fitting-section .inner {
+        padding: 96px 100px 192px 100px;
+    }
+    .live-txtLoop {
+        padding: 16px;
+    }
+    .loop-track p {
+        font-size: 44px;
+    }
+    .news-item {
+        padding-top: 8px;
+    }
     .news-list .item-title {
         font-size: clamp(20px, 2.2vw, 38px);
     }
     .fitting-title .arrow img {
-        width: clamp(24px, 5vw, 40px);
+        width: clamp(24px, 5vw, 30px);
+    }
+
+    .season-area .season-left {
+        width: 50%;
+    }
+    .season-area .season-right {
+        width: 45%;
+    }
+    .community {
+        background: linear-gradient(to bottom, #222 0%, #222 70%, #ffffff 30%, #ffffff 100%);
     }
 }
 
-/* --- 테블릿 (1024px 미만) --- */
-@media (max-width: 1024px) {
+/* 테블릿 (620 ~ 1024px) */
+@media (min-width: 620px) and (max-width: 1024px) {
     .inner {
-        padding-top: clamp(32px, 12vw, 96px);
-        padding-bottom: clamp(32px, 12vw, 96px);
+        padding: 96px 32px;
+    }
+    .fitting-section .inner {
+        padding: 96px 32px 192px 32px;
     }
     /* --------<Header>-------- */
     .mobile-menu-btn {
@@ -37,10 +58,10 @@
     .nav {
         position: fixed;
         top: 0;
-        right: -100%; /* 기본적으로 화면 밖으로 밀어둠 */
+        right: -100%;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.95); /* 어두운 배경 */
+        background: rgba(0, 0, 0, 0.95);
         transition: 0.4s ease;
         z-index: 1000;
     }
@@ -74,19 +95,20 @@
     }
     /* --------//<Hero>--------  */
 
-    /* ------<Live-show-txt-loop>------ */
-    .live-txtLoop {
-        padding: 16px;
-    }
-    .loop-track p {
-        font-size: 44px;
-    }
-    /* ------//<Live-show-txt-loop>------ */
-
     /* --------<Live>--------  */
+    .live-list {
+        gap: 12px;
+    }
+    .live-title .more-btn {
+        font-size: 24px;
+    }
     .live-list {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+
+    .live-list .live-card {
+        flex: 0 0 calc((100% - 48px) / 4);
     }
     /* --------//<Live>--------  */
 
@@ -94,34 +116,139 @@
     .news-item {
         padding-bottom: 32px;
     }
-
+    .news-title {
+        margin-bottom: 32px;
+    }
     .news-list .item-title {
         font-size: clamp(28px, 2.7vw, 48px);
+    }
+    .news-list .item-tags {
+        gap: 4px;
     }
     .news-list .item-tags .tag {
         padding: 4px 10px;
         font-size: 10px;
     }
+    .news-list .item-desc {
+        font-size: 12px;
+    }
     /* --------//<News>-------- */
 
     /* --------<Fitting>-------- */
-    .fitting-section .inner {
-        flex-direction: column;
-        align-items: baseline;
-        gap: 60px;
+    .service-p {
+        margin-top: 0;
     }
-
+    .fitting-title .sub-title {
+        padding: 32px 0 8px 0;
+        font-size: 16px;
+    }
+    .fitting-title .sub-desc {
+        font-size: 12px;
+    }
     .fit-area {
         width: 100%;
     }
     /* --------//<Fitting>-------- */
-}
 
-/* --- 모바일 (768px 이하) --- */
-@media (max-width: 768px) {
-    .inner {
+    /* --------<Recommend>-------- */
+    .recommend-section .inner {
         padding-left: clamp(16px, 4vw, 32px);
         padding-right: clamp(16px, 4vw, 32px);
+    }
+
+    .recom-img-area {
+        padding-top: 40px;
+    }
+
+    .recom-item {
+        width: calc((100vw - 64px - 48px) / 4);
+        min-width: 180px;
+    }
+
+    .recom-item:hover {
+        transform: scale(1.2);
+    }
+
+    .recom-item .overlay {
+        padding: 25px 18px;
+    }
+
+    .recom-item .overlay-title {
+        font-size: 16px;
+    }
+
+    .recom-item .overlay-desc {
+        font-size: 11px;
+    }
+    /* --------//<Recommend>-------- */
+
+    /* --------<Seasonal>-------- */
+    .season-area {
+        margin-top: 32px;
+    }
+    .season-area .season-left {
+        width: 45%;
+    }
+    .season-area .season-right {
+        width: 50%;
+    }
+    .season-right ul {
+        margin-top: 16px;
+    }
+    .city,
+    .temp {
+        font-size: 14px;
+    }
+    .season-right li {
+        padding: 22px 12px;
+    }
+    .temp .degree {
+        line-height: 2;
+    }
+    .title-row .number {
+        font-size: 24px;
+    }
+    .title-row h3 {
+        font-size: 28px;
+    }
+    .desc {
+        font-size: 14px;
+    }
+    /* --------//<Seasonal>-------- */
+
+    /* --------<Comminity>-------- */
+    .community-header {
+        margin-bottom: 32px;
+    }
+    .review-link {
+        font-size: 24px;
+    }
+    .community-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .w-100-right {
+        margin-bottom: 16px;
+    }
+    .community-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 21px;
+    }
+
+    .community-item:nth-child(n + 9) {
+        display: none;
+    }
+    /* --------//<Comminity>-------- */
+}
+/* ---------//<Tablet>--------- */
+
+/* --- 모바일 (620px 이하) --- */
+@media (max-width: 620px) {
+    .inner {
+        /* padding-left: clamp(16px, 4vw, 32px);
+        padding-right: clamp(16px, 4vw, 32px); */
+        padding: 32px 16px;
     }
     /* --------<Hero>--------  */
     .main-title-group {
@@ -146,20 +273,43 @@
     /* ------//<Live-show-txt-loop>------ */
 
     /* --------<Live>--------  */
-
+    .live-title .more-btn {
+        font-size: 18px;
+    }
+    .live-title a {
+        padding: 0 23px;
+    }
+    .live-title a::after {
+        content: '';
+        position: absolute;
+        top: 60%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url('/public/img/common/more-sm.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .live-list-wrapper {
+        padding: 18% 0 0 0;
+    }
+    .live-list .live-card {
+        flex: 0 0 80%;
+    }
+    .live-list .live-card:hover {
+        transform: scale(1.1);
+    }
     /* --------//<Live>--------  */
 
     /* --------<News>-------- */
     .news-section {
         padding: 40px 0;
     }
-
     .news-item {
-        padding-bottom: 16px;
-    }
-
-    .news-item {
-        flex-direction: column; /* 세로 배치로 변경 */
+        padding-bottom: 0;
+        flex-direction: column;
     }
 
     .news-item .img-box {
@@ -167,13 +317,11 @@
     }
 
     .news-item .text-box {
-        padding: 20px;
+        padding: 16px 0;
     }
-
-    .news-list .item-title {
-        font-size: clamp(22px, 2.8vw, 28px);
+    .news-title {
+        margin-bottom: 16px;
     }
-
     .news-title .title {
         font-size: 22px;
     }
@@ -189,6 +337,8 @@
 
     .news-list .item-title {
         order: 1;
+        margin-bottom: 0;
+        font-size: 20px;
     }
 
     .news-list .item-desc {
@@ -207,8 +357,18 @@
         flex-direction: column;
         text-align: left;
         gap: 16px;
+        align-items: normal;
+        padding: 32px 16px;
     }
-
+    .serviceRight {
+        padding: 8px;
+    }
+    .service-p {
+        margin-top: 0;
+    }
+    .fitting-title .sub-title {
+        padding: 16px 0;
+    }
     .fitting-title .title {
         font-size: 28px;
     }
@@ -231,10 +391,153 @@
         margin-left: 10px;
     }
 
+    .fit-area {
+        width: 100%;
+    }
+
     .model-img {
         width: clamp(200px, 20vw, 320px);
         z-index: 2;
     }
+    /* --------//<Fitting>-------- */
+
+    /* --------<Recommend>-------- */
+    .recommend-section .title {
+        padding-bottom: 30px;
+    }
+
+    .recommend-section .inner {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .recom-img-area {
+        padding-bottom: 32px;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .recom-img-wrapper {
+        gap: 16px;
+    }
+
+    .recom-item:hover {
+        transform: scale(1.05);
+        margin: 0 5px;
+    }
+
+    .recom-item .overlay {
+        padding: 30px 24px;
+    }
+
+    .recom-item .overlay-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .recom-item .overlay-desc {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    /* --------//<Recommend>-------- */
+
+    /* --------<Seasonal>-------- */
+    .season-area {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 16px;
+    }
+    .season-area .season-left {
+        width: 100%;
+    }
+
+    .season-area .season-right {
+        width: 100%;
+    }
+    .city,
+    .temp {
+        font-size: 12px;
+    }
+    .temp .degree {
+        line-height: 2;
+    }
+    .season-right li {
+        padding: 16px;
+    }
+    .title-row .number {
+        font-size: 14px;
+    }
+    .title-row h3 {
+        font-size: 20px;
+    }
+    .desc {
+        font-size: 12px;
+    }
+    /* --------//<Seasonal>-------- */
+
+    /* --------<Comminity>-------- */
+    .community-header {
+        margin-bottom: 16px;
+    }
+    .community-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .community {
+        padding: 60px 0;
+        background: linear-gradient(to bottom, #222 0%, #222 65%, #ffffff 35%, #ffffff 100%);
+    }
+
+    .community-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .review-link {
+        font-size: 14px;
+    }
+    .review-link::after {
+        content: '';
+        display: inline-block;
+        margin-left: 10px;
+        width: 12px;
+        height: 12px;
+        background-image: url('/public/img/common/more-sm.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+    }
+    .community-header h2 {
+        font-size: 28px;
+    }
+    .w-100-right {
+        margin-bottom: 16px;
+    }
+    .community-item:nth-child(n + 10) {
+        display: none;
+    }
+    .community-grid {
+        gap: 14px;
+    }
+    /* --------//<Comminity>-------- */
 }
 
-/* --------//<Fitting>-------- */
+/* --- 모바일 (460px 이하) --- */
+@media (max-width: 460px) {
+    .news-list .news-item .img-box img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+    .news-list .news-item:first-child .img-box img {
+        object-position: calc(50% - 70px) center;
+    }
+    .news-list .news-item:last-child .img-box img {
+        object-position: calc(50% - 200px) center;
+    }
+    .recom-item {
+        width: calc(100vw - 80px);
+        min-width: calc(100vw - 80px);
+    }
+}

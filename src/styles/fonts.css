@@ -1,5 +1,4 @@
-/*---------Freesentation------------- */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @font-face {
     font-family: 'Freesentation';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2')
@@ -53,8 +52,3 @@
     font-style: normal;
     font-display: swap;
 }
-/* ------//Freesentation------ */
-
-/* -------Roboto-------- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-/* ------//Roboto------ */

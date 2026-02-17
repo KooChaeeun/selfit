@@ -20,7 +20,7 @@ const Fitting = () => {
                             <img src="/img/main/fitting_btn_arrow.png" alt="arrow" />
                         </span>
                         <br />
-                        <p>SERVICE!</p>
+                        <p className="service-p">SERVICE!</p>
                     </h2>
                     <p className="sub-title">
                         가상 피팅 서비스로 나에게 가장 어울리는 순간을, 지금 만나보세요.
