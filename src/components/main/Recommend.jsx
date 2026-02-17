@@ -47,7 +47,7 @@ const Recommend = () => {
         },
     ];
 
-    const { scrollRef, onDragStart, onDragEnd, onDragMove } = useDraggable();
+    const { scrollRef, onPointerDown, onPointerUp, onPointerMove } = useDraggable();
 
     return (
         <section className="recommend-section">
@@ -60,10 +60,10 @@ const Recommend = () => {
             <div
                 className="recom-img-area"
                 ref={scrollRef}
-                onMouseDown={onDragStart}
-                onMouseUp={onDragEnd}
-                onMouseMove={onDragMove}
-                onMouseLeave={onDragEnd}
+                onPointerDown={onPointerDown}
+                onPointerUp={onPointerUp}
+                onPointerMove={onPointerMove}
+                onPointerLeave={onPointerUp}
             >
                 <div className="recom-img-wrapper">
                     {recommendItems.map((item) => (

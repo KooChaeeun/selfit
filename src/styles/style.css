@@ -39,8 +39,8 @@ body {
     font-weight: 900;
     line-height: normal;
 }
-/* ------<Header>------ */
-/* .header {
+/* ------임시<Header>------ 
+.header {
     width: 100%;
     height: 80px;
     position: fixed;
@@ -102,8 +102,8 @@ body {
     position: absolute;
     right: 0;
     padding: 20px;
-} */
-/* ------//<Header>------ */
+} 
+//<Header>------ */
 
 /* --------<Hero>--------  */
 .hero {
@@ -146,7 +146,6 @@ body {
     transform: translateX(-50%);
 }
 
-/* 좌측 상단 문구 */
 .sub-title.top-left {
     position: absolute;
     top: 15%;
@@ -186,13 +185,10 @@ body {
     bottom: 0%;
     right: 0;
     z-index: 1;
-    /* 꼬리가 겹치도록 왼쪽으로 살짝 당김 */
     margin-right: 5%;
-    /* SELFIT의 꼬리와 겹치게 위로 살짝 올림 */
     margin-bottom: -2%;
 }
 
-/* 우측 하단 문구 */
 .description-group.bottom-right {
     position: absolute;
     bottom: 10%;
@@ -467,7 +463,6 @@ body {
     padding: 96px 170px 192px 170px;
 }
 
-/* LEFT TEXT */
 .fitting-title {
     flex: 1;
 }
@@ -505,7 +500,6 @@ body {
     color: #818181;
 }
 
-/* RIGHT AREA */
 .bg-grey {
     background: #f9f9f9;
 }
@@ -522,13 +516,11 @@ body {
     align-items: center;
 }
 
-/* 모델 */
 .model-img {
     width: clamp(260px, 28vw, 420px);
     z-index: 2;
 }
 
-/* 옷 아이템 */
 .clothes-items {
     position: absolute;
     width: 100%;
@@ -581,6 +573,7 @@ body {
     user-select: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    touch-action: pan-y;
 }
 
 .recom-img-area::-webkit-scrollbar {
@@ -618,11 +611,10 @@ body {
 
 .recom-item:hover {
     transform: scale(1.2);
-    margin: 0 28px;
+    margin: 0 20px;
     z-index: 10;
 }
 
-/* 오버레이 - hover 시에만 표시 */
 .recom-item .overlay {
     position: absolute;
     width: 100%;
