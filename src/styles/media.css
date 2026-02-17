@@ -4,8 +4,8 @@
     }
 }
 
-/* --- 테블릿 (1300px 이하) --- */
-@media (max-width: 1300px) {
+/* --- 노트북 (1700px 이하) --- */
+@media (max-width: 1700px) {
     .inner {
         padding: 96px 100px;
     }
@@ -24,8 +24,11 @@
     .news-list .item-title {
         font-size: clamp(20px, 2.2vw, 38px);
     }
+    .fitting-title .arrow {
+        margin: 0 0 13px 20px;
+    }
     .fitting-title .arrow img {
-        width: clamp(24px, 5vw, 30px);
+        width: clamp(24px, 5vw, 40px);
     }
 
     .season-area .season-left {
@@ -137,6 +140,15 @@
     /* --------<Fitting>-------- */
     .service-p {
         margin-top: 0;
+    }
+    .fitting-title .title {
+        font-size: clamp(28px, 7vw, 72px);
+    }
+    .fitting-title .arrow {
+        margin: 0 0 8px 20px;
+    }
+    .fitting-title .arrow img {
+        width: clamp(20px, 3vw, 30px);
     }
     .fitting-title .sub-title {
         padding: 32px 0 8px 0;
@@ -358,6 +370,12 @@
     }
     .service-p {
         margin-top: 0;
+    }
+    .fitting-title .arrow {
+        margin: 5px 0 0px 0px;
+    }
+    .fitting-title .arrow img {
+        width: clamp(15px, 4vw, 28px);
     }
     .fitting-title .sub-title {
         padding: 16px 0;

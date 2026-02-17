@@ -25,9 +25,9 @@ body {
     color: var(--black);
 }
 .inner {
-    /* max-width: 1580px; */
+    max-width: 1580px;
     margin: 0 auto;
-    padding: 96px 170px;
+    padding: 96px 0px;
     box-sizing: border-box;
 }
 
@@ -455,12 +455,14 @@ body {
 /* --------//<Trend News>-------- */
 
 /* --------<Fitting>-------- */
+.fitting-section {
+    margin-bottom: 96px;
+}
 .fitting-section .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: clamp(40px, 8vw, 120px);
-    padding: 96px 170px 192px 170px;
 }
 
 .fitting-title {
@@ -482,12 +484,12 @@ body {
 
 .fitting-title .arrow {
     display: inline-block;
-    margin: 0 0 15px 12px;
+    margin: 0 0 13px 40px;
     vertical-align: middle;
 }
 
 .fitting-title .arrow img {
-    width: clamp(24px, 10vw, 50px);
+    width: clamp(24px, 10vw, 55px);
 }
 
 .fitting-title .sub-title {
@@ -553,8 +555,6 @@ body {
 }
 
 .recommend-section .inner {
-    padding-left: clamp(32px, 8vw, 100px);
-    padding-right: clamp(32px, 8vw, 100px);
     padding-bottom: 0;
 }
 
