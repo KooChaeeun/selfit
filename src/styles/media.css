@@ -293,7 +293,7 @@
         background-position: center;
     }
     .live-list-wrapper {
-        padding: 18% 0 0 0;
+        padding: 18% 0 7% 0;
     }
     .live-list .live-card {
         flex: 0 0 80%;
@@ -323,7 +323,7 @@
         margin-bottom: 16px;
     }
     .news-title .title {
-        font-size: 22px;
+        font-size: 28px;
     }
 
     .news-list .text-box .info {
@@ -525,7 +525,7 @@
 }
 
 /* --- 모바일 (460px 이하) --- */
-@media (max-width: 460px) {
+@media (max-width: 500px) {
     .news-list .news-item .img-box img {
         aspect-ratio: 1 / 1;
         object-fit: cover;

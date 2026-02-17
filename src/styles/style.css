@@ -477,6 +477,7 @@ body {
     font-size: clamp(72px, 6vw, 130px);
     font-weight: 900;
     line-height: 1.1;
+    cursor: pointer;
 }
 
 .fitting-title .title p:first-child {

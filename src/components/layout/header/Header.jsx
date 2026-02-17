@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <header className="header">
             <h1 className="logo">
-                <a href="/" aria-label="Home">
+                <a href="https://selfit-nu.vercel.app/" aria-label="Home">
                     <Logo className="logo-svg" />
                 </a>
             </h1>

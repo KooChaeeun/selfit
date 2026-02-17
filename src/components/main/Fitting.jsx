@@ -14,7 +14,10 @@ const Fitting = () => {
             <div className="inner">
                 {/* LEFT */}
                 <div className="fitting-title">
-                    <h2 className="title">
+                    <h2
+                        className="title"
+                        onClick={() => (window.location.href = 'https://selfit-subpage.vercel.app')}
+                    >
                         <p>TRY OUR</p>
                         <span className="arrow">
                             <img src="/img/main/fitting_btn_arrow.png" alt="arrow" />
