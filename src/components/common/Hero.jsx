@@ -12,7 +12,9 @@ const Hero = () => {
                 <div className="inner-container">
                     {/* 좌측 상단 문구 */}
                     <p className="sub-title top-left">
-                        내게 맞는 스타일, 나만의 모습 — Find your fit, be your self
+                        패션과 문화의 시작
+                        <br />
+                        Selfit — 사람을 패션으로 잇다
                     </p>
 
                     {/* 중앙 메인 타이틀 (SELFIT YOUR) */}

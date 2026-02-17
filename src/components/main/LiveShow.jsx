@@ -33,6 +33,36 @@ const LiveShow = () => {
             status: 'ON AIR',
             img: '/img/main/live05.jpg',
         },
+        {
+            id: 6,
+            time: '',
+            status: 'ON AIR',
+            img: '/img/main/live06.jpg',
+        },
+        {
+            id: 7,
+            time: '',
+            status: 'OFF AIR',
+            img: '/img/main/live07.jpg',
+        },
+        {
+            id: 8,
+            time: '',
+            status: 'ON AIR',
+            img: '/img/main/live08.jpg',
+        },
+        {
+            id: 9,
+            time: '',
+            status: 'ON AIR',
+            img: '/img/main/live09.jpg',
+        },
+        {
+            id: 10,
+            time: '',
+            status: 'ON AIR',
+            img: '/img/main/live10.jpg',
+        },
     ];
 
     // 커스텀 훅 사용

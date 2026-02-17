@@ -531,7 +531,7 @@
         object-fit: cover;
     }
     .news-list .news-item:first-child .img-box img {
-        object-position: calc(50% - 70px) center;
+        object-position: calc(50% - 60px) center;
     }
     .news-list .news-item:last-child .img-box img {
         object-position: calc(50% - 200px) center;

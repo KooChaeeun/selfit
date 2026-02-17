@@ -156,23 +156,23 @@ body {
     white-space: nowrap;
 }
 
-/* 중앙 메인 타이틀 이미지 컨테이너 */
 .main-title-group {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90vw; /* 화면 너비에 따라 전체 크기 조절 */
+    width: 90vw;
     max-width: 1762px;
-    height: 40vw; /* 높이를 vw로 잡아 이미지 간 수직 거리 유지 */
+    height: 40vw;
     max-height: 550px;
 }
 
 .main-title-group img {
     position: absolute;
-    width: 54%; /* 두 이미지의 기본 크기 */
+    width: 54%;
     mix-blend-mode: exclusion;
     transition: all 0.3s ease;
+    opacity: 0.65;
 }
 
 /* SELFIT */
@@ -199,6 +199,7 @@ body {
     right: 5%;
     text-align: right;
     color: #fff;
+    font-size: 14px;
 }
 
 /* --------//<Hero>--------  */
@@ -327,7 +328,7 @@ body {
 .live-list .img-box {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 6.5;
+    aspect-ratio: 4 / 6.8;
     overflow: hidden;
     background: #000;
     user-select: none;
