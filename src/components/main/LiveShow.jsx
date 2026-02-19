@@ -66,7 +66,8 @@ const LiveShow = () => {
     ];
 
     // 커스텀 훅 사용
-    const { scrollRef, onDragStart, onDragEnd, onDragMove } = useDraggable();
+    // const { scrollRef, onDragStart, onDragEnd, onDragMove } = useDraggable();
+    const { scrollRef, onPointerDown, onPointerUp, onPointerMove } = useDraggable();
 
     return (
         <section className="live-section">
@@ -81,16 +82,16 @@ const LiveShow = () => {
                 <div
                     className="live-list-wrapper"
                     ref={scrollRef}
-                    onMouseDown={onDragStart}
-                    onMouseUp={onDragEnd}
-                    onMouseMove={onDragMove}
-                    onMouseLeave={onDragEnd}
+                    onPointerDown={onPointerDown}
+                    onPointerUp={onPointerUp}
+                    onPointerMove={onPointerMove}
+                    onPointerLeave={onPointerUp}
                 >
                     <div className="live-list">
                         {liveItems.map((item) => (
                             <div className="live-card" key={item.id}>
                                 <div className="img-box">
-                                    <img src={item.img} alt={item.title} />
+                                    <img src={item.img} alt={item.title} draggable={false}/>
                                 </div>
                             </div>
                         ))}

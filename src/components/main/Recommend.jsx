@@ -68,7 +68,7 @@ const Recommend = () => {
                 <div className="recom-img-wrapper">
                     {recommendItems.map((item) => (
                         <div key={item.id} className="recom-item">
-                            <img src={item.src} alt={item.alt} />
+                            <img src={item.src} alt={item.alt} draggable={false}/>
                             <div className="overlay">
                                 <div className="overlay-title">{item.title}</div>
                                 <div className="overlay-desc">{item.desc}</div>
